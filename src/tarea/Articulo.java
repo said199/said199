@@ -6,7 +6,7 @@ public interface Articulo {
    
     public void armas();
     public void electrodomesticos();
-    public void ropa();
+
     
     
 }

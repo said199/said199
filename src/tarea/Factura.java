@@ -1,26 +1,25 @@
 
 package tarea;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 
 public class Factura extends Lista {
 
 public static void main(String[] args) {
      Lista miLista = new Lista();
-    //miLista.productos = new ArrayList();
-  // miLista.leerOpcion();
+   miLista.medicina();
+    miLista.armas();
+    miLista.electrodomesticos();
+     
+     
+     
 }
 
-//ArrayList<Lista> ListaMedicina = new ArrayList<Lista>();
-   
+}
 
 
 
 
-
- public void leerOpcion(){
-    Scanner imprimir = new Scanner (System.in);
+ 
+  /*  Scanner imprimir = new Scanner (System.in);
     
     int opcion = 0;
     do{
@@ -34,7 +33,7 @@ public static void main(String[] args) {
               
               opcion = imprimir.nextInt();
               
-              switch (opcion){
+            switch (opcion){
                   case 1:
                       agregarElemento();
                       break;
@@ -62,7 +61,7 @@ public static void main(String[] args) {
     } while(opcion != 7 );
             
        
-    }
-}
+    }*/
+
       
 

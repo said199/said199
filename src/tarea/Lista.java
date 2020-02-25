@@ -1,78 +1,61 @@
 
 package tarea;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 
 public class Lista implements Articulo {
-private int precio = 0;
-private String marca = null;
-private String calibre = null;
-private int cantidad = 0;
 
-    private static void add(String elemento) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-   
-ArrayList<Lista> prouctos;
-public void  agregarElemento(){
-             Scanner imprimir = new Scanner (System.in);
-             String elemento = null;
-            System.out.println("ingrese elemento");
-            elemento = imprimir.next();
-            
-            Lista.add(elemento);
-        }
-public void eliminarElemento(){
-}
-    public void insertarElemento(){
-        
-    }
-    public void modificarElemento(){
-        
-    }
     
-      public void buscarElemento(){
-             Scanner imprimir = new Scanner (System.in);
-              String elemento = null;
-              int indice;
-              System.out.println("buscar elemento");
-               elemento = imprimir.next();
-             //  indice = imprimir.indexOf(elemento)
-      }
-            public void mostarElemento(){
-      }
-        
-  
-    
+ private Nodo cabeza;
+ private int tamano;
  
+     Lista (){
+         cabeza  = null;
+         tamano = 0;
+         
+        }
+      void agregarDelante(Object articulo){
+          if ( cabeza == null){
+              cabeza = new Nodo (articulo );
+              
+          }
+         
+           else{
+             Nodo temp = cabeza ;
+             Nodo nuevo = new Nodo(articulo);
+                  nuevo.agragar(temp);
+                  cabeza = nuevo;
+                          
+                 }
+          tamano ++;
+          
+              }
+        Object ver (int indice ){
+            
+              Nodo temp = cabeza ;
+              for (int i = 0 ; i<indice; i++){
+                  temp = temp.verSiguiente();
+              
+          }
+              return temp.verDato();
+            } 
+
     @Override
-    public void medicina() { 
-        System.out.println("medicina");
-        
+    public void medicina() {
+        System.out.println("asetaminofen");
         
     }
 
     @Override
-    public void armas() { 
+    public void armas() {
         
-    }
+        System.out.println("calibre 50");
+         }
 
     @Override
-    public void electrodomesticos() { 
-        
+    public void electrodomesticos() {
+      
+        System.out.println("refrigeradora");
     }
-
-    @Override
-    public void ropa() { 
     
-    }
+      }
 
-    
-   
-  
-   
-  
-}
